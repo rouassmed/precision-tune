@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Precision Tune — Professional ECU remapping, diagnostics, and performance tuning in Paris Île-de-France. OEM engineer background. 24/7 support.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Precision Tune — Performance Tuning & Diagnostics | France</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%23e63946'/><text y='.9em' x='50%' text-anchor='middle' fill='white' font-size='70' font-family='Arial'>PT</text></svg>">
+</head>
+<body>
+
+<!-- ═══ PAGE LOADER ═══ -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-logo">Precision <span>Tune</span></div>
+  <div class="loader-bar">
+    <div class="loader-bar-fill" id="loaderBar"></div>
+  </div>
+  <div class="loader-percent" id="loaderPercent">0%</div>
+</div>
+
+<!-- ═══ HEADER ═══ -->
+<header class="header" id="header">
+  <a href="#" class="logo">
+    <div class="logo-mark">PT</div>
+    <div class="logo-text">Precision <span>Tune</span></div>
+  </a>
+  
+  <nav>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="#credentials" data-i18n="nav.credentials">Credentials</a></li>
+      <li><a href="#brands" data-i18n="nav.brands">Brands</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta" data-i18n="nav.cta">Get Tuned</a></li>
+    </ul>
+  </nav>
+  
+  <div class="header-actions">
+    <button class="lang-toggle" id="langToggle" aria-label="Switch language">FR</button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<!-- ═══ HERO SECTION ═══ -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1920&q=80" alt="Performance car" class="hero-bg-img" loading="eager">
+  </div>
+  
+  <div class="hero-badge reveal">
+    <span class="badge-dot"></span>
+    <span data-i18n="hero.badge">Factory-Trained Engineer — Stellantis · Renault · Volkswagen</span>
+  </div>
+  
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal" data-i18n="hero.eyebrow">Professional Automotive Tuning</div>
+      <div class="hero-location reveal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Paris · Île-de-France</span>
+        <span class="loc-pulse">24/7</span>
+      </div>
+      <h1 class="hero-title split-text" id="heroTitle">
+        <span class="line-1" data-i18n="hero.title1">Unleash Your</span>
+        <span class="line-2" data-i18n="hero.title2">Engine's Power</span>
+      </h1>
+      <p class="hero-desc reveal reveal-delay-2" data-i18n="hero.desc">
+        ECU remapping, diagnostics, and locksmith services by a certified automotive engineer 
+        with OEM background at Stellantis, Renault, and VW. Factory-level expertise, 
+        aftermarket results. 24/7 emergency support available.
+      </p>
+      <div class="hero-actions reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.btn1">Book Your Tune</a>
+        <a href="#credentials" class="btn btn-secondary" data-i18n="hero.btn2">My Background</a>
+      </div>
+      
+      <div class="hero-trust reveal reveal-delay-4">
+        <div class="trust-item">
+          <div class="trust-check">✓</div>
+          <span data-i18n="hero.trust1">OEM-Certified Engineer</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-check">✓</div>
+          <span data-i18n="hero.trust2">24/7 Emergency Support</span>
+        </div>
+        <div class="trust-item">
+          <div class="trust-check">✓</div>
+          <span data-i18n="hero.trust3">Stock File Preserved</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="hero-visual reveal reveal-delay-2">
+      <div class="hero-gauge">
+        <div class="gauge-ring"></div>
+        <div class="gauge-center">
+          <div class="gauge-number" id="heroCounter">0</div>
+          <div class="gauge-label">HP+ Potential</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M8 4v12M4 14l4 4 4-4"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═══ -->
+<section class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item reveal">
+      <div class="stat-number"><span class="counter" data-target="500">0</span><span class="stat-suffix">+</span></div>
+      <div class="stat-label" data-i18n="stat.cars">Cars Tuned</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-1">
+      <div class="stat-number"><span class="counter" data-target="85">0</span><span class="stat-suffix">HP</span></div>
+      <div class="stat-label" data-i18n="stat.hp">Avg. HP Gain</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-2">
+      <div class="stat-number"><span class="counter" data-target="24">0</span><span class="stat-suffix">/7</span></div>
+      <div class="stat-label" data-i18n="stat.support">Support</div>
+    </div>
+    <div class="stat-item reveal reveal-delay-3">
+      <div class="stat-number"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+      <div class="stat-label" data-i18n="stat.satisfaction">Satisfaction</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CREDENTIALS SECTION ═══ -->
+<section class="section credentials-section" id="credentials">
+  <div class="section-header reveal">
+    <div class="section-eyebrow" data-i18n="cred.eyebrow">Why Trust Me</div>
+    <h2 class="section-title" data-i18n="cred.title">Engineered at OEM Level</h2>
+    <p class="section-subtitle" data-i18n="cred.subtitle">Not a self-taught tuner. A certified automotive engineer who learned calibration inside the factories that built your car.</p>
+  </div>
+  
+  <div class="credentials-grid">
+    <div class="credential-card reveal">
+      <div class="credential-logo">
+        <svg viewBox="0 0 120 60" fill="none"><rect x="10" y="10" width="100" height="40" rx="4" fill="#003366"/><text x="60" y="38" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">STELLANTIS</text></svg>
+      </div>
+      <h3 data-i18n="cred.stellantis.title">OEM Calibration Engineer</h3>
+      <p data-i18n="cred.stellantis.desc">Trained inside Stellantis powertrain development. Deep knowledge of MultiAir, PureTech, BlueHDi, and STLA platform ECUs. I know these engines from the blueprint up.</p>
+      <div class="credential-tags">
+        <span>MultiAir</span><span>PureTech</span><span>BlueHDi</span>
+      </div>
+    </div>
+    
+    <div class="credential-card reveal reveal-delay-1">
+      <div class="credential-logo">
+        <svg viewBox="0 0 120 60" fill="none"><circle cx="60" cy="30" r="25" fill="none" stroke="#FFD700" stroke-width="3"/><path d="M60 8l7 16h17l-13 10 5 16-16-11-16 11 5-16-13-10h17z" fill="#FFD700"/></svg>
+      </div>
+      <h3 data-i18n="cred.renault.title">Renault Powertrain R&D</h3>
+      <p data-i18n="cred.renault.desc">Worked on Renault-Nissan Alliance engine calibration. Expert in Energy TCe, dCi, and E-Tech hybrid systems. Factory diagnostic protocols — no guesswork.</p>
+      <div class="credential-tags">
+        <span>TCe</span><span>dCi</span><span>E-Tech</span>
+      </div>
+    </div>
+    
+    <div class="credential-card reveal reveal-delay-2">
+      <div class="credential-logo">
+        <svg viewBox="0 0 120 60" fill="none"><circle cx="60" cy="30" r="26" fill="#001E50"/><path d="M48 20h8v8h16v-8h8v20h-8v-8H56v8h-8z" fill="white"/></svg>
+      </div>
+      <h3 data-i18n="cred.vw.title">VW Group Specialist</h3>
+      <p data-i18n="cred.vw.desc">OEM experience with Volkswagen AG calibration tools. VAG-COM deep protocols, MQB platform maps, DSG tuning, and EA888/EA211 engine families.</p>
+      <div class="credential-tags">
+        <span>EA888</span><span>MQB</span><span>DSG</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="credentials-banner reveal">
+    <div class="cred-banner-item">
+      <div class="cred-icon">🎓</div>
+      <div>
+        <strong data-i18n="cred.banner1.title">Automotive Engineer</strong>
+        <span data-i18n="cred.banner1.sub">Degree + OEM Certs</span>
+      </div>
+    </div>
+    <div class="cred-banner-divider"></div>
+    <div class="cred-banner-item">
+      <div class="cred-icon">🏭</div>
+      <div>
+        <strong data-i18n="cred.banner2.title">Factory Trained</strong>
+        <span data-i18n="cred.banner2.sub">3 Major OEMs</span>
+      </div>
+    </div>
+    <div class="cred-banner-divider"></div>
+    <div class="cred-banner-item">
+      <div class="cred-icon">🔐</div>
+      <div>
+        <strong data-i18n="cred.banner3.title">Licensed Locksmith</strong>
+        <span data-i18n="cred.banner3.sub">Key Programming & Immo</span>
+      </div>
+    </div>
+    <div class="cred-banner-divider"></div>
+    <div class="cred-banner-item">
+      <div class="cred-icon">⚡</div>
+      <div>
+        <strong data-i18n="cred.banner4.title">24/7 Emergency</strong>
+        <span data-i18n="cred.banner4.sub">Diagnostics & Recovery</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES SECTION ═══ -->
+<section class="section" id="services">
+  <div class="section-header reveal">
+    <div class="section-eyebrow" data-i18n="svc.eyebrow">What We Do</div>
+    <h2 class="section-title" data-i18n="svc.title">Tuning Services</h2>
+    <p class="section-subtitle" data-i18n="svc.subtitle">From Stage 1 daily drivers to emergency diagnostics at 2 AM — every vehicle, every hour.</p>
+  </div>
+  
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80" alt="Stage 1 Tuning" class="service-img" loading="lazy">
+      </div>
+      <div class="service-icon">🔧</div>
+      <h3 class="service-title" data-i18n="svc.stage1.title">Stage 1 ECU Remap</h3>
+      <p class="service-desc" data-i18n="svc.stage1.desc">Optimized stock calibration for daily drivers. Safe power gains, improved throttle response, and smoother delivery — all within manufacturer safety margins.</p>
+      <div class="service-price"><span data-i18n="svc.price">From</span> 299 <span>EUR</span></div>
+    </div>
+    
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80" alt="Stage 2 Tuning" class="service-img" loading="lazy">
+      </div>
+      <div class="service-icon">⚡</div>
+      <h3 class="service-title" data-i18n="svc.stage2.title">Stage 2 Performance</h3>
+      <p class="service-desc" data-i18n="svc.stage2.desc">Hardware-supported tuning with upgraded intake, exhaust, and intercooler. Aggressive maps for enthusiasts who want serious power without sacrificing reliability.</p>
+      <div class="service-price"><span data-i18n="svc.price">From</span> 449 <span>EUR</span></div>
+    </div>
+    
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&q=80" alt="Stage 3 Tuning" class="service-img" loading="lazy">
+      </div>
+      <div class="service-icon">🏁</div>
+      <h3 class="service-title" data-i18n="svc.stage3.title">Stage 3 Custom Map</h3>
+      <p class="service-desc" data-i18n="svc.stage3.desc">Full custom calibration on the dyno. Big turbo, forged internals, race fuel — we build the map around your hardware. Maximum power, maximum control.</p>
+      <div class="service-price"><span data-i18n="svc.price">From</span> 749 <span>EUR</span></div>
+    </div>
+    
+    <div class="service-card reveal reveal-delay-3">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=600&q=80" alt="Diagnostics" class="service-img" loading="lazy">
+      </div>
+      <div class="service-badge" data-i18n="svc.diag.badge">24/7</div>
+      <div class="service-icon">🔍</div>
+      <h3 class="service-title" data-i18n="svc.diag.title">Diagnostics & Coding</h3>
+      <p class="service-desc" data-i18n="svc.diag.desc">Full-system OBD diagnostics, DTC analysis, coding activation, and module programming. Emergency diagnostic support available 24/7. Dealer-level capabilities.</p>
+      <div class="service-price"><span data-i18n="svc.price">From</span> 59 <span>EUR</span></div>
+    </div>
+    
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=600&q=80" alt="Car Locksmith" class="service-img" loading="lazy">
+      </div>
+      <div class="service-icon">🔐</div>
+      <h3 class="service-title" data-i18n="svc.lock.title">Car Locksmith</h3>
+      <p class="service-desc" data-i18n="svc.lock.desc">Key programming, immobilizer coding, transponder cloning, remote key fob configuration, and lockout assistance. Licensed automotive locksmith with OEM-grade tools.</p>
+      <div class="service-price"><span data-i18n="svc.price">From</span> 99 <span>EUR</span></div>
+    </div>
+    
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-img-wrap">
+        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&q=80" alt="Remote Tuning" class="service-img" loading="lazy">
+      </div>
+      <div class="service-icon">💻</div>
+      <h3 class="service-title" data-i18n="svc.remote.title">Remote Tuning</h3>
+      <p class="service-desc" data-i18n="svc.remote.desc">Can't visit? Ship your ECU or use our remote file service. Same OEM-grade quality, delivered digitally — anywhere in Paris Île-de-France and Europe.</p>
+      <div class="service-price"><span data-i18n="svc.price">From</span> 199 <span>EUR</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS SECTION ═══ -->
+<section class="section process-section" id="process">
+  <div class="section-header reveal">
+    <div class="section-eyebrow" data-i18n="proc.eyebrow">How It Works</div>
+    <h2 class="section-title" data-i18n="proc.title">Our Process</h2>
+    <p class="section-subtitle" data-i18n="proc.subtitle">Four steps from stock to beast. Transparent, professional, and built around your goals.</p>
+  </div>
+  
+  <div class="process-steps">
+    <div class="process-step reveal">
+      <div class="step-number">01</div>
+      <div class="step-content">
+        <h3 data-i18n="proc.step1.title">Consultation & Assessment</h3>
+        <p data-i18n="proc.step1.desc">We start with your goals. Daily driver efficiency? Track day dominance? Towing torque? We assess your vehicle's current health, hardware mods, and ECU version to build the right strategy.</p>
+      </div>
+    </div>
+    <div class="step-divider"></div>
+    
+    <div class="process-step reveal">
+      <div class="step-number">02</div>
+      <div class="step-content">
+        <h3 data-i18n="proc.step2.title">Data Reading & Backup</h3>
+        <p data-i18n="proc.step2.desc">We read your ECU's original file via OBD or bench mode — never opening the ECU unless necessary. Every original file is cryptographically hashed and stored securely. You always get your stock file back.</p>
+      </div>
+    </div>
+    <div class="step-divider"></div>
+    
+    <div class="process-step reveal">
+      <div class="step-number">03</div>
+      <div class="step-content">
+        <h3 data-i18n="proc.step3.title">Map Development & Testing</h3>
+        <p data-i18n="proc.step3.desc">Our engineers modify ignition timing, fuel maps, boost pressure, torque limits, and throttle response based on your hardware and goals. Each map is validated against thermodynamic safety margins.</p>
+      </div>
+    </div>
+    <div class="step-divider"></div>
+    
+    <div class="process-step reveal">
+      <div class="step-number">04</div>
+      <div class="step-content">
+        <h3 data-i18n="proc.step4.title">Delivery & Validation</h3>
+        <p data-i18n="proc.step4.desc">The tuned file is written to your ECU. We perform live data logging, check for fault codes, and validate AFR, boost, and EGT readings. Dyno validation available on request.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US SECTION ═══ -->
+<section class="section" id="why-us">
+  <div class="section-header reveal">
+    <div class="section-eyebrow" data-i18n="why.eyebrow">Why Precision Tune</div>
+    <h2 class="section-title" data-i18n="why.title">Built Different</h2>
+    <p class="section-subtitle" data-i18n="why.subtitle">Not just a remap — a complete performance partnership backed by engineering rigor.</p>
+  </div>
+  
+  <div class="features-grid">
+    <div class="feature-item reveal">
+      <div class="feature-icon">🛡️</div>
+      <h3 class="feature-title" data-i18n="why.f1.title">Safety First</h3>
+      <p class="feature-desc" data-i18n="why.f1.desc">Every map respects thermal and mechanical limits. We monitor EGT, knock, and AFR margins to protect your engine — power without compromise.</p>
+    </div>
+    
+    <div class="feature-item reveal reveal-delay-1">
+      <div class="feature-icon">📊</div>
+      <h3 class="feature-title" data-i18n="why.f2.title">Data-Driven</h3>
+      <p class="feature-desc" data-i18n="why.f2.desc">No guesswork. We log live ECU data before, during, and after tuning. Every parameter change is justified by physics and measured results.</p>
+    </div>
+    
+    <div class="feature-item reveal reveal-delay-2">
+      <div class="feature-icon">🔁</div>
+      <h3 class="feature-title" data-i18n="why.f3.title">Full Reversibility</h3>
+      <p class="feature-desc" data-i18n="why.f3.desc">Your original ECU file is always preserved. Want to go back to stock? We restore it in minutes — no trace, no hassle, no dealer trips.</p>
+    </div>
+    
+    <div class="feature-item reveal">
+      <div class="feature-icon">🌍</div>
+      <h3 class="feature-title" data-i18n="why.f4.title">All Makes & Models</h3>
+      <p class="feature-desc" data-i18n="why.f4.desc">European, Japanese, Korean, American — petrol, diesel, hybrid. We support Bosch, Siemens, Delphi, Magneti Marelli, and more.</p>
+    </div>
+    
+    <div class="feature-item reveal reveal-delay-1">
+      <div class="feature-icon">💻</div>
+      <h3 class="feature-title" data-i18n="why.f5.title">Remote Tuning</h3>
+      <p class="feature-desc" data-i18n="why.f5.desc">Can't visit our shop? Ship us your ECU or use our remote tuning service. Same quality, delivered to your door — worldwide.</p>
+    </div>
+    
+    <div class="feature-item reveal reveal-delay-2">
+      <div class="feature-icon">⚙️</div>
+      <h3 class="feature-title" data-i18n="why.f6.title">Coding & Features</h3>
+      <p class="feature-desc" data-i18n="why.f6.desc">Activate hidden OEM features, retrofit modules, disable start-stop, enable video-in-motion, and more — all dealer-grade coding.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BRANDS SECTION ═══ -->
+<section class="section brands-section" id="brands">
+  <div class="section-header reveal">
+    <div class="section-eyebrow" data-i18n="brand.eyebrow">Trusted Expertise</div>
+    <h2 class="section-title" data-i18n="brand.title">Brands We Tune</h2>
+    <p class="section-subtitle" data-i18n="brand.subtitle">Factory-trained on these platforms. Every protocol, every ECU, every module — no learning curve.</p>
+  </div>
+  
+  <div class="brands-grid reveal">
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/bmw.png" alt="BMW" loading="lazy">
+      </div>
+      <span class="brand-name">BMW</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/mercedes.png" alt="Mercedes-AMG" loading="lazy">
+      </div>
+      <span class="brand-name">Mercedes-AMG</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo brand-audi">
+        <svg viewBox="0 0 160 80" fill="none">
+          <circle cx="25" cy="40" r="20" fill="none" stroke="white" stroke-width="2.5"/>
+          <circle cx="55" cy="40" r="20" fill="none" stroke="white" stroke-width="2.5"/>
+          <circle cx="85" cy="40" r="20" fill="none" stroke="white" stroke-width="2.5"/>
+          <circle cx="115" cy="40" r="20" fill="none" stroke="white" stroke-width="2.5"/>
+        </svg>
+      </div>
+      <span class="brand-name">Audi</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/vw.png" alt="Volkswagen" loading="lazy">
+      </div>
+      <span class="brand-name">Volkswagen</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo brand-porsche">
+        <svg viewBox="0 0 100 100" fill="none">
+          <path d="M50 6L88 22v32c0 20-17 36-38 36S12 74 12 54V22L50 6z" fill="#B12B28" stroke="#C0A062" stroke-width="2"/>
+          <path d="M50 18L76 30v22c0 14-11.6 26-26 26S24 66 24 52V30L50 18z" fill="#C0A062" opacity="0.3"/>
+          <text x="50" y="82" text-anchor="middle" fill="#C0A062" font-family="Arial" font-size="8" font-weight="bold">PORSCHE</text>
+        </svg>
+      </div>
+      <span class="brand-name">Porsche</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/renault.png" alt="Renault" loading="lazy">
+      </div>
+      <span class="brand-name">Renault</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/peugeot.png" alt="Peugeot" loading="lazy">
+      </div>
+      <span class="brand-name">Peugeot</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/ford.png" alt="Ford" loading="lazy">
+      </div>
+      <span class="brand-name">Ford</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/toyota.png" alt="Toyota" loading="lazy">
+      </div>
+      <span class="brand-name">Toyota</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/nissan.png" alt="Nissan" loading="lazy">
+      </div>
+      <span class="brand-name">Nissan</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo-img">
+        <img src="images/logos/hyundai.png" alt="Hyundai" loading="lazy">
+      </div>
+      <span class="brand-name">Hyundai</span>
+    </div>
+    <div class="brand-item">
+      <div class="brand-logo brand-mini">
+        <svg viewBox="0 0 120 60" fill="none">
+          <path d="M10 30c0-12 10-22 22-22h56c12 0 22 10 22 22s-10 22-22 22H32c-12 0-22-10-22-22z" fill="#111" stroke="white" stroke-width="2"/>
+          <text x="60" y="38" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold" letter-spacing="3">MINI</text>
+          <path d="M18 30c0-8 6-14 14-14M88 16c8 0 14 6 14 14" stroke="white" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <span class="brand-name">Mini</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT SECTION ═══ -->
+<section class="section contact-section" id="contact">
+  <div class="contact-grid">
+    <div class="contact-info reveal">
+      <div class="section-eyebrow" data-i18n="ct.eyebrow">Get Started</div>
+      <h2 data-i18n="ct.title">Ready to Unlock Your Power?</h2>
+      <p data-i18n="ct.subtitle">Tell us about your vehicle and goals. I'll respond within hours — emergency support available 24/7.</p>
+      
+      <div class="contact-details">
+        <div class="contact-item contact-emergency">
+          <div class="contact-item-icon">🚨</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label" data-i18n="ct.emergency">24/7 Emergency Line</span>
+            <a href="tel:+33651006218" class="contact-item-value">+33 6 51 00 62 18</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-item-icon">📧</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label" data-i18n="ct.email">Email</span>
+            <a href="mailto:contact@precisiontune.fr" class="contact-item-value">contact@precisiontune.fr</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label" data-i18n="ct.whatsapp">WhatsApp</span>
+            <a href="https://wa.me/33651006218" class="contact-item-value">+33 6 51 00 62 18</a>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <span class="contact-item-label" data-i18n="ct.location">Location</span>
+            <span class="contact-item-value" data-i18n="ct.location.val">Paris Île-de-France</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="contact-form reveal reveal-delay-2">
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name" data-i18n="ct.form.name">Full Name</label>
+            <input type="text" id="name" name="name" data-i18n-placeholder="ct.form.placeholder.name" placeholder="Your name" required minlength="2" maxlength="100">
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="ct.form.email">Email</label>
+            <input type="email" id="email" name="email" data-i18n-placeholder="ct.form.placeholder.email" placeholder="your@email.com" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone" data-i18n="ct.form.phone">Phone</label>
+            <input type="tel" id="phone" name="phone" data-i18n-placeholder="ct.form.placeholder.phone" placeholder="+33 6 51 00 62 18">
+          </div>
+          <div class="form-group">
+            <label for="service" data-i18n="ct.form.service">Service</label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected data-i18n="ct.form.svc.default">Select a service</option>
+              <option value="stage1" data-i18n="ct.form.svc.stage1">Stage 1 ECU Remap</option>
+              <option value="stage2" data-i18n="ct.form.svc.stage2">Stage 2 Performance</option>
+              <option value="stage3" data-i18n="ct.form.svc.stage3">Stage 3 Custom Map</option>
+              <option value="diagnostic" data-i18n="ct.form.svc.diag">Diagnostics (24/7)</option>
+              <option value="locksmith" data-i18n="ct.form.svc.lock">Car Locksmith</option>
+              <option value="custom" data-i18n="ct.form.svc.custom">Other / Emergency</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="message" data-i18n="ct.form.msg">Your Message</label>
+          <textarea id="message" name="message" data-i18n-placeholder="ct.form.placeholder.msg" placeholder="Tell me about your car, symptoms, or emergency situation..." required minlength="10" maxlength="2000"></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit" id="submitBtn" data-i18n="ct.form.submit">Send Message</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="logo">
+        <div class="logo-mark">PT</div>
+        <div class="logo-text">Precision <span>Tune</span></div>
+      </a>
+      <p data-i18n="foot.desc">Professional ECU tuning, diagnostics, and locksmith services by a certified OEM automotive engineer. Stellantis · Renault · VW factory-trained.</p>
+    </div>
+    
+    <div>
+      <h4 class="footer-title" data-i18n="foot.services">Services</h4>
+      <ul class="footer-links">
+        <li><a href="#services">ECU Remapping</a></li>
+        <li><a href="#services">Performance Tuning</a></li>
+        <li><a href="#services">24/7 Diagnostics</a></li>
+        <li><a href="#services">Car Locksmith</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="footer-title" data-i18n="foot.creds">Credentials</h4>
+      <ul class="footer-links">
+        <li><a href="#credentials">OEM Engineer</a></li>
+        <li><a href="#credentials">Stellantis Trained</a></li>
+        <li><a href="#credentials">Renault R&D</a></li>
+        <li><a href="#credentials">VW Specialist</a></li>
+      </ul>
+    </div>
+    
+    <div>
+      <h4 class="footer-title" data-i18n="foot.emergency">Emergency Contact</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+33651006218">+33 6 51 00 62 18</a></li>
+        <li><a href="mailto:contact@precisiontune.fr">contact@precisiontune.fr</a></li>
+        <li><a href="https://wa.me/33651006218" target="_blank">WhatsApp 24/7</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p data-i18n="foot.copy">&copy; 2026 Precision Tune. All rights reserved.</p>
+    <p data-i18n="foot.tag">OEM-Trained Engineer · 24/7 Support · France</p>
+  </div>
+</footer>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
