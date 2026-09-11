@@ -555,6 +555,18 @@
           <textarea id="message" name="message" data-i18n-placeholder="ct.form.placeholder.msg" placeholder="Tell me about your car, symptoms, or emergency situation..." required minlength="10" maxlength="2000"></textarea>
         </div>
         
+        <div class="form-group form-hp" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+
+        <div class="form-group form-consent">
+          <label class="consent-label">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span data-i18n="ct.form.consent">J'accepte que mes données soient utilisées pour traiter ma demande (RGPD).</span>
+          </label>
+        </div>
+
         <button type="submit" class="form-submit" id="submitBtn" data-i18n="ct.form.submit">Send Message</button>
         <div class="form-message" id="formMessage"></div>
       </form>
@@ -610,6 +622,7 @@
   </div>
 </footer>
 
+<script src="js/config.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

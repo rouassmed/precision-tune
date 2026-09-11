@@ -127,6 +127,7 @@
       'ct.form.phone': 'Phone',
       'ct.form.service': 'Service',
       'ct.form.msg': 'Your Message',
+      'ct.form.consent': 'I agree that my data will be used to process my request (GDPR).',
       'ct.form.submit': 'Send Message',
       'ct.form.placeholder.name': 'Your name',
       'ct.form.placeholder.email': 'your@email.com',
@@ -265,6 +266,7 @@
       'ct.form.phone': 'Téléphone',
       'ct.form.service': 'Service',
       'ct.form.msg': 'Votre Message',
+      'ct.form.consent': 'J\'accepte que mes données soient utilisées pour traiter ma demande (RGPD).',
       'ct.form.submit': 'Envoyer',
       'ct.form.placeholder.name': 'Votre nom',
       'ct.form.placeholder.email': 'votre@email.com',
@@ -606,19 +608,49 @@
       submitBtn.disabled = true;
       submitBtn.textContent = currentLang === 'fr' ? 'Envoi...' : 'Sending...';
 
+      // Honeypot anti-spam : champ invisible rempli par les bots -> faux succes
+      if (contactForm.website && contactForm.website.value) {
+        showFormSuccess(currentLang === 'fr' ? 'Merci ! Nous vous contacterons sous 24h.' : 'Thank you! We will contact you within 24 hours.');
+        contactForm.reset();
+        return;
+      }
+
+      // Consentement RGPD obligatoire
+      if (!contactForm.consent.checked) {
+        showFormError(currentLang === 'fr' ? 'Veuillez cocher la case de consentement RGPD.' : 'Please tick the GDPR consent box.');
+        return;
+      }
+
+      // Backend : Supabase (js/config.js) si configure, sinon fallback WhatsApp
+      const sbConfigured = typeof SUPABASE_URL !== 'undefined' &&
+        typeof SUPABASE_ANON_KEY !== 'undefined' &&
+        SUPABASE_URL.indexOf('YOUR_') === -1 &&
+        SUPABASE_ANON_KEY.indexOf('YOUR_') === -1;
+
       try {
-        const response = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({ name, email, phone, service, message })
-        });
-        const data = await response.json();
-        if (data.success) {
-          showFormSuccess(data.message || (currentLang === 'fr' ? 'Merci ! Nous vous contacterons sous 24h.' : 'Thank you! We will contact you within 24 hours.'));
+        if (sbConfigured) {
+          const response = await fetch(SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/leads', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'apikey': SUPABASE_ANON_KEY,
+              'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+              'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({ name, email, phone: phone || null, service, message, lang: currentLang })
+          });
+          if (!response.ok) throw new Error('Supabase HTTP ' + response.status);
+          showFormSuccess(currentLang === 'fr' ? 'Merci ! Votre demande est enregistrée — je vous recontacte sous 24h.' : 'Thank you! Your request is saved — I will get back to you within 24 hours.');
           contactForm.reset();
         } else {
-          const errorMsg = data.errors ? data.errors.map(e => e.message).join(', ') : (data.error || (currentLang === 'fr' ? "Une erreur s'est produite." : 'Something went wrong.'));
-          showFormError(errorMsg);
+          // Fallback : WhatsApp pre-rempli (aucune demande perdue)
+          const waText = encodeURIComponent(
+            '🔧 Precision Tune — Nouvelle demande\n' +
+            'Nom : ' + name + '\nEmail : ' + email + '\nTél : ' + (phone || '-') + '\nService : ' + service + '\n\n' + message
+          );
+          window.open('https://wa.me/33651006218?text=' + waText, '_blank');
+          showFormSuccess(currentLang === 'fr' ? "Votre demande est pré-remplie dans WhatsApp — il ne reste qu'à appuyer sur Envoyer." : 'Your request is pre-filled in WhatsApp — just hit Send.');
+          contactForm.reset();
         }
       } catch (err) {
         showFormError(currentLang === 'fr' ? 'Erreur réseau. Veuillez vérifier votre connexion.' : 'Network error. Please check your connection.');
