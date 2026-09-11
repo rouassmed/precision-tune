@@ -1627,3 +1627,61 @@ h1, h2, h3, h4 {
   cursor: pointer;
   flex-shrink: 0;
 }
+
+/* ═══ Écrans bas : laptops 13", zoom navigateur, paysage mobile.
+       Le zoom réduit la hauteur de viewport CSS -> ces règles s'activent
+       et empêchent le hero de pousser les CTA hors écran. ═══ */
+@media (max-height: 780px) {
+  .hero {
+    padding-top: 5.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero-content {
+    gap: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 1.5rem + 4vw, 5rem);
+  }
+
+  .hero-location {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    padding: 0.4rem 1rem;
+  }
+
+  .hero-gauge {
+    max-width: min(420px, 56vh);
+  }
+
+  .btn {
+    padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-height: 620px) {
+  .hero {
+    padding-top: 4.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 1.2rem + 3.5vw, 3.5rem);
+  }
+
+  .hero-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    max-width: 440px;
+  }
+
+  .hero-gauge {
+    max-width: min(300px, 48vh);
+  }
+
+  .hero-badge {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.72rem;
+  }
+}
