@@ -22,11 +22,11 @@
       'lang.en': 'EN',
 
       // Hero
-      'hero.badge': 'Factory-Trained Engineer — Stellantis · Renault · Volkswagen',
+      'hero.badge': 'R&D Engineer — Stellantis · Renault · Volkswagen',
       'hero.eyebrow': 'Professional Automotive Tuning',
       'hero.title1': 'Unleash Your',
       'hero.title2': "Engine's Power",
-      'hero.desc': "ECU remapping, diagnostics, and locksmith services by a certified automotive engineer with OEM background at Stellantis, Renault, and VW. Factory-level expertise, aftermarket results. 24/7 emergency support available.",
+      'hero.desc': "ECU remapping, diagnostics, and locksmith services by a certified automotive engineer with OEM background at Stellantis, Renault, and VW. R&D lab-grade expertise, aftermarket results. 24/7 emergency support available.",
       'hero.btn1': 'Book Your Tune',
       'hero.btn2': 'My Background',
       'hero.trust1': 'OEM-Certified Engineer',
@@ -41,17 +41,17 @@
 
       // Credentials
       'cred.eyebrow': 'Why Trust Me',
-      'cred.title': 'Engineered at OEM Level',
-      'cred.subtitle': "Not a self-taught tuner. A certified automotive engineer who learned calibration inside the factories that built your car.",
+      'cred.title': 'Developed in R&D Labs',
+      'cred.subtitle': "Not a self-taught tuner. A certified automotive engineer who learned calibration in the R&D labs of the manufacturers who designed your car.",
       'cred.stellantis.title': 'OEM Calibration Engineer',
       'cred.stellantis.desc': 'Trained inside Stellantis powertrain development. Deep knowledge of MultiAir, PureTech, BlueHDi, and STLA platform ECUs. I know these engines from the blueprint up.',
       'cred.renault.title': 'Renault Powertrain R&D',
-      'cred.renault.desc': "Worked on Renault-Nissan Alliance engine calibration. Expert in Energy TCe, dCi, and E-Tech hybrid systems. Factory diagnostic protocols — no guesswork.",
+      'cred.renault.desc': "Worked on Renault-Nissan Alliance engine calibration. Expert in Energy TCe, dCi, and E-Tech hybrid systems. OEM diagnostic protocols — no guesswork.",
       'cred.vw.title': 'VW Group Specialist',
       'cred.vw.desc': 'OEM experience with Volkswagen AG calibration tools. VAG-COM deep protocols, MQB platform maps, DSG tuning, and EA888/EA211 engine families.',
       'cred.banner1.title': 'Automotive Engineer',
       'cred.banner1.sub': 'Degree + OEM Certs',
-      'cred.banner2.title': 'Factory Trained',
+      'cred.banner2.title': 'R&D Lab Trained',
       'cred.banner2.sub': '3 Major OEMs',
       'cred.banner3.title': 'Licensed Locksmith',
       'cred.banner3.sub': 'Key Programming & Immo',
@@ -110,7 +110,7 @@
       // Brands
       'brand.eyebrow': 'Trusted Expertise',
       'brand.title': 'Brands We Tune',
-      'brand.subtitle': 'Factory-trained on these platforms. Every protocol, every ECU, every module — no learning curve.',
+      'brand.subtitle': 'Calibrated in OEM R&D labs on these platforms. Every protocol, every ECU, every module — no learning curve.',
 
       // Contact
       'ct.eyebrow': 'Get Started',
@@ -161,11 +161,11 @@
       'lang.en': 'EN',
 
       // Hero
-      'hero.badge': 'Ingénieur Formé en Usine — Stellantis · Renault · Volkswagen',
+      'hero.badge': 'Ingénieur R&D Automobile — Stellantis · Renault · Volkswagen',
       'hero.eyebrow': 'Tuning Automobile Professionnel',
       'hero.title1': 'Libérez la',
       'hero.title2': 'Puissance',
-      'hero.desc': "Remappage ECU, diagnostic et serrurerie automobile par un ingénieur automobile certifié avec expérience OEM chez Stellantis, Renault et VW. Expertise usine, résultats aftermarket. Support d'urgence 24h/24 disponible.",
+      'hero.desc': "Remappage ECU, diagnostic et serrurerie automobile par un ingénieur automobile certifié avec expérience OEM chez Stellantis, Renault et VW. Expertise de labo R&D, résultats aftermarket. Support d'urgence 24h/24 disponible.",
       'hero.btn1': 'Réserver',
       'hero.btn2': 'Mon Parcours',
       'hero.trust1': 'Ingénieur Certifié OEM',
@@ -180,17 +180,17 @@
 
       // Credentials
       'cred.eyebrow': 'Pourquoi Me Faire Confiance',
-      'cred.title': "Conçu au Niveau de l'Usine",
-      'cred.subtitle': "Pas un autodidacte. Un ingénieur automobile certifié qui a appris l'étalonnage à l'intérieur des usines qui ont construit votre voiture.",
+      'cred.title': "Développé en Labo R&D",
+      'cred.subtitle': "Pas un autodidacte. Un ingénieur automobile certifié qui a appris l’étalonnage dans les laboratoires R&D des constructeurs qui ont conçu votre voiture.",
       'cred.stellantis.title': "Ingénieur d'Étalonnage OEM",
       'cred.stellantis.desc': "Formé au sein du développement powertrain Stellantis. Connaissance approfondie des MultiAir, PureTech, BlueHDi et des ECU de plateforme STLA. Je connais ces moteurs depuis le plan.",
       'cred.renault.title': 'R&D Powertrain Renault',
-      'cred.renault.desc': "A travaillé sur l'étalonnage moteur de l'Alliance Renault-Nissan. Expert en Energy TCe, dCi et systèmes hybrides E-Tech. Protocoles de diagnostic usine — pas de devinettes.",
+      'cred.renault.desc': "A travaillé sur l'étalonnage moteur de l'Alliance Renault-Nissan. Expert en Energy TCe, dCi et systèmes hybrides E-Tech. Protocoles de diagnostic OEM — pas de devinettes.",
       'cred.vw.title': 'Spécialiste Groupe VW',
       'cred.vw.desc': "Expérience OEM avec les outils d'étalonnage Volkswagen AG. Protocoles VAG-COM avancés, cartes plateforme MQB, tuning DSG et familles de moteurs EA888/EA211.",
       'cred.banner1.title': 'Ingénieur Automobile',
       'cred.banner1.sub': 'Diplôme + Certif. OEM',
-      'cred.banner2.title': "Formé à l'Usine",
+      'cred.banner2.title': "Issu des Labos R&D",
       'cred.banner2.sub': '3 Grands Constructeurs',
       'cred.banner3.title': 'Serrurier Agréé',
       'cred.banner3.sub': 'Programmation Clés & Immo',
@@ -249,7 +249,7 @@
       // Brands
       'brand.eyebrow': 'Expertise Reconnue',
       'brand.title': 'Marques Que Nous Tunons',
-      'brand.subtitle': "Formé en usine sur ces plateformes. Chaque protocole, chaque ECU, chaque module — pas de courbe d'apprentissage.",
+      'brand.subtitle': "Étalonné ces plateformes en labo R&D. Chaque protocole, chaque ECU, chaque module — pas de courbe d'apprentissage.",
 
       // Contact
       'ct.eyebrow': 'Commencer',
